@@ -56,6 +56,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BE52C1AB1A441D92002E18E8 /* models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		BE52C1AC1A441DB8002E18E8 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				BE52C1AB1A441D92002E18E8 /* models */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
 		BE54B6ED1A417D67005F985D = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +92,7 @@
 		BE54B6F81A417D67005F985D /* stinkytofu */ = {
 			isa = PBXGroup;
 			children = (
+				BE52C1AC1A441DB8002E18E8 /* src */,
 				BE54B6FB1A417D67005F985D /* AppDelegate.swift */,
 				BE54B6FD1A417D67005F985D /* ViewController.swift */,
 				BE54B6FF1A417D67005F985D /* Main.storyboard */,
@@ -409,6 +425,7 @@
 				BE54B7171A417D67005F985D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BE54B7181A417D67005F985D /* Build configuration list for PBXNativeTarget "stinkytofuTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +434,7 @@
 				BE54B71A1A417D67005F985D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
