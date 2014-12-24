@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE2DF6281A4A75F30046B170 /* STHomeMenuItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2DF6271A4A75F30046B170 /* STHomeMenuItemCell.swift */; };
+		BE52C1AF1A4961EA002E18E8 /* STHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE52C1AE1A4961EA002E18E8 /* STHomeViewController.swift */; };
 		BE54B6FC1A417D67005F985D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE54B6FB1A417D67005F985D /* AppDelegate.swift */; };
-		BE54B6FE1A417D67005F985D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE54B6FD1A417D67005F985D /* ViewController.swift */; };
 		BE54B7011A417D67005F985D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE54B6FF1A417D67005F985D /* Main.storyboard */; };
 		BE54B7031A417D67005F985D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE54B7021A417D67005F985D /* Images.xcassets */; };
 		BE54B7061A417D67005F985D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE54B7041A417D67005F985D /* LaunchScreen.xib */; };
@@ -26,10 +27,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BE2DF6271A4A75F30046B170 /* STHomeMenuItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STHomeMenuItemCell.swift; sourceTree = "<group>"; };
+		BE52C1AE1A4961EA002E18E8 /* STHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STHomeViewController.swift; sourceTree = "<group>"; };
 		BE54B6F61A417D67005F985D /* stinkytofu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = stinkytofu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE54B6FA1A417D67005F985D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE54B6FB1A417D67005F985D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BE54B6FD1A417D67005F985D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BE54B7001A417D67005F985D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BE54B7021A417D67005F985D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BE54B7051A417D67005F985D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -66,9 +68,19 @@
 		BE52C1AC1A441DB8002E18E8 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				BE52C1AD1A496184002E18E8 /* ui */,
 				BE52C1AB1A441D92002E18E8 /* models */,
 			);
 			path = src;
+			sourceTree = "<group>";
+		};
+		BE52C1AD1A496184002E18E8 /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				BE52C1AE1A4961EA002E18E8 /* STHomeViewController.swift */,
+				BE2DF6271A4A75F30046B170 /* STHomeMenuItemCell.swift */,
+			);
+			path = ui;
 			sourceTree = "<group>";
 		};
 		BE54B6ED1A417D67005F985D = {
@@ -94,7 +106,6 @@
 			children = (
 				BE52C1AC1A441DB8002E18E8 /* src */,
 				BE54B6FB1A417D67005F985D /* AppDelegate.swift */,
-				BE54B6FD1A417D67005F985D /* ViewController.swift */,
 				BE54B6FF1A417D67005F985D /* Main.storyboard */,
 				BE54B7021A417D67005F985D /* Images.xcassets */,
 				BE54B7041A417D67005F985D /* LaunchScreen.xib */,
@@ -228,8 +239,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE54B6FE1A417D67005F985D /* ViewController.swift in Sources */,
+				BE52C1AF1A4961EA002E18E8 /* STHomeViewController.swift in Sources */,
 				BE54B6FC1A417D67005F985D /* AppDelegate.swift in Sources */,
+				BE2DF6281A4A75F30046B170 /* STHomeMenuItemCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
