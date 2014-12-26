@@ -14,6 +14,7 @@
 		BE54B7031A417D67005F985D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE54B7021A417D67005F985D /* Images.xcassets */; };
 		BE54B7061A417D67005F985D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE54B7041A417D67005F985D /* LaunchScreen.xib */; };
 		BE54B7121A417D67005F985D /* stinkytofuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE54B7111A417D67005F985D /* stinkytofuTests.swift */; };
+		BEAF87BC1A4BB9C50093890C /* STCameraUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAF87BB1A4BB9C50093890C /* STCameraUtil.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		BE54B70B1A417D67005F985D /* stinkytofuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = stinkytofuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE54B7101A417D67005F985D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE54B7111A417D67005F985D /* stinkytofuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stinkytofuTests.swift; sourceTree = "<group>"; };
+		BEAF87BB1A4BB9C50093890C /* STCameraUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STCameraUtil.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,8 +70,9 @@
 		BE52C1AC1A441DB8002E18E8 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				BE52C1AD1A496184002E18E8 /* ui */,
 				BE52C1AB1A441D92002E18E8 /* models */,
+				BE52C1AD1A496184002E18E8 /* ui */,
+				BEAF87BA1A4BB96C0093890C /* utils */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -137,6 +140,14 @@
 				BE54B7101A417D67005F985D /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BEAF87BA1A4BB96C0093890C /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				BEAF87BB1A4BB9C50093890C /* STCameraUtil.swift */,
+			);
+			path = utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,6 +253,7 @@
 				BE52C1AF1A4961EA002E18E8 /* STHomeViewController.swift in Sources */,
 				BE54B6FC1A417D67005F985D /* AppDelegate.swift in Sources */,
 				BE2DF6281A4A75F30046B170 /* STHomeMenuItemCell.swift in Sources */,
+				BEAF87BC1A4BB9C50093890C /* STCameraUtil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

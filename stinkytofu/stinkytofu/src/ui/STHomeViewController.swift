@@ -82,7 +82,23 @@ class STHomeViewController: UICollectionViewController {
     
     // Uncomment this method to specify if the specified item should be selected
     override func collectionView(collectionView: UICollectionView, shouldSelectItemAtIndexPath indexPath: NSIndexPath) -> Bool {
-        return true
+        switch indexPath.row {
+        case 0:
+            if (STCameraUtil.isCameraAvailable())
+            {
+                STCameraUtil.loadCamera(self)
+                return true
+            }
+        case 1:
+            if (STCameraUtil.isAlbumAvailable())
+            {
+                STCameraUtil.loadAlbum(self)
+                return true
+            }
+        default:
+            break
+        }
+        return false
     }
     
 
