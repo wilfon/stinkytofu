@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BE2DF6281A4A75F30046B170 /* STHomeMenuItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2DF6271A4A75F30046B170 /* STHomeMenuItemCell.swift */; };
+		BE35FDFB1A74655C00D77CBE /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE35FDFA1A74655B00D77CBE /* MobileCoreServices.framework */; };
 		BE52C1AF1A4961EA002E18E8 /* STHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE52C1AE1A4961EA002E18E8 /* STHomeViewController.swift */; };
 		BE54B6FC1A417D67005F985D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE54B6FB1A417D67005F985D /* AppDelegate.swift */; };
 		BE54B7011A417D67005F985D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE54B6FF1A417D67005F985D /* Main.storyboard */; };
@@ -15,6 +16,8 @@
 		BE54B7061A417D67005F985D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE54B7041A417D67005F985D /* LaunchScreen.xib */; };
 		BE54B7121A417D67005F985D /* stinkytofuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE54B7111A417D67005F985D /* stinkytofuTests.swift */; };
 		BEAF87BC1A4BB9C50093890C /* STCameraUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAF87BB1A4BB9C50093890C /* STCameraUtil.swift */; };
+		BEF8C82B1A4DEDF8001CD97E /* STWheelMock2dViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF8C8291A4DEDF8001CD97E /* STWheelMock2dViewController.swift */; };
+		BEF8C82C1A4DEDF8001CD97E /* STWheelMock2dViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEF8C82A1A4DEDF8001CD97E /* STWheelMock2dViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		BE2DF6271A4A75F30046B170 /* STHomeMenuItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STHomeMenuItemCell.swift; sourceTree = "<group>"; };
+		BE35FDFA1A74655B00D77CBE /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		BE52C1AE1A4961EA002E18E8 /* STHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STHomeViewController.swift; sourceTree = "<group>"; };
 		BE54B6F61A417D67005F985D /* stinkytofu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = stinkytofu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE54B6FA1A417D67005F985D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -40,6 +44,8 @@
 		BE54B7101A417D67005F985D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE54B7111A417D67005F985D /* stinkytofuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stinkytofuTests.swift; sourceTree = "<group>"; };
 		BEAF87BB1A4BB9C50093890C /* STCameraUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STCameraUtil.swift; sourceTree = "<group>"; };
+		BEF8C8291A4DEDF8001CD97E /* STWheelMock2dViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STWheelMock2dViewController.swift; sourceTree = "<group>"; };
+		BEF8C82A1A4DEDF8001CD97E /* STWheelMock2dViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STWheelMock2dViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE35FDFB1A74655C00D77CBE /* MobileCoreServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +89,8 @@
 			children = (
 				BE52C1AE1A4961EA002E18E8 /* STHomeViewController.swift */,
 				BE2DF6271A4A75F30046B170 /* STHomeMenuItemCell.swift */,
+				BEF8C8291A4DEDF8001CD97E /* STWheelMock2dViewController.swift */,
+				BEF8C82A1A4DEDF8001CD97E /* STWheelMock2dViewController.xib */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -89,6 +98,7 @@
 		BE54B6ED1A417D67005F985D = {
 			isa = PBXGroup;
 			children = (
+				BE35FDFA1A74655B00D77CBE /* MobileCoreServices.framework */,
 				BE54B6F81A417D67005F985D /* stinkytofu */,
 				BE54B70E1A417D67005F985D /* stinkytofuTests */,
 				BE54B6F71A417D67005F985D /* Products */,
@@ -233,6 +243,7 @@
 				BE54B7011A417D67005F985D /* Main.storyboard in Resources */,
 				BE54B7061A417D67005F985D /* LaunchScreen.xib in Resources */,
 				BE54B7031A417D67005F985D /* Images.xcassets in Resources */,
+				BEF8C82C1A4DEDF8001CD97E /* STWheelMock2dViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE52C1AF1A4961EA002E18E8 /* STHomeViewController.swift in Sources */,
+				BEF8C82B1A4DEDF8001CD97E /* STWheelMock2dViewController.swift in Sources */,
 				BE54B6FC1A417D67005F985D /* AppDelegate.swift in Sources */,
 				BE2DF6281A4A75F30046B170 /* STHomeMenuItemCell.swift in Sources */,
 				BEAF87BC1A4BB9C50093890C /* STCameraUtil.swift in Sources */,

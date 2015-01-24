@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MobileCoreServices
 
 class STCameraUtil {
     // TODO: handle camera setup n' stuff
@@ -21,7 +22,7 @@ class STCameraUtil {
             UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary)
     }
     
-    class func loadCamera(viewcontroller: UIViewController) {
+    class func loadCamera(viewcontroller: UIViewController, delegate: protocol<UIImagePickerControllerDelegate, UINavigationControllerDelegate>) {
         if (!isCameraAvailable())
         {
             return
@@ -29,13 +30,14 @@ class STCameraUtil {
         
         let cameraVC = UIImagePickerController()
         cameraVC.sourceType = UIImagePickerControllerSourceType.Camera
-//        cameraVC.mediaTypes = kUTTypeImage
+        cameraVC.mediaTypes = [kUTTypeImage]
         cameraVC.allowsEditing = true
+        cameraVC.delegate = delegate
         
         viewcontroller.presentViewController(cameraVC, animated: true, nil)
     }
     
-    class func loadAlbum(viewcontroller: UIViewController) {
+    class func loadAlbum(viewcontroller: UIViewController, delegate: protocol<UIImagePickerControllerDelegate, UINavigationControllerDelegate>) {
         var albumVC: UIImagePickerController!
         if (UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.SavedPhotosAlbum))
         {
@@ -47,6 +49,7 @@ class STCameraUtil {
             albumVC = UIImagePickerController()
             albumVC.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
         }
+        albumVC.delegate = delegate
         
         viewcontroller.presentViewController(albumVC, animated: true, nil)
     }

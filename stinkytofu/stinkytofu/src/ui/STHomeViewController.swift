@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import MobileCoreServices
 
 let reuseIdentifierMenuItem = "CellMenuItem"
 
-class STHomeViewController: UICollectionViewController {
+class STHomeViewController: UICollectionViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,27 +53,26 @@ class STHomeViewController: UICollectionViewController {
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
-        //if (indexPath.section == 0) {
-            let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifierMenuItem, forIndexPath: indexPath) as STHomeMenuItemCell
-            // Configure the cell
-            switch indexPath.row {
-            case 0:
-                cell.label.text = NSLocalizedString("home take_photo", tableName: nil, bundle: NSBundle.mainBundle(), value: "Take Photo", comment: "home menu option")
-            case 1:
-                cell.label.text = NSLocalizedString("home load_picture", tableName: nil, bundle: NSBundle.mainBundle(), value: "Load Picture", comment: "home menu option")
-            default:
-                // TODO: what i really want here is the display name
-                cell.label.text = NSBundle.mainBundle().infoDictionary!.description
-//                localizedInfoDictionary.objectForKey("CFBundleDisplayName")
-
-            }
+//        if indexPath.section == 0 {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifierMenuItem, forIndexPath: indexPath) as STHomeMenuItemCell
+        // Configure the cell
+        switch indexPath.row {
+        case 0:
+            cell.label.text = NSLocalizedString("home take_photo", tableName: nil, bundle: NSBundle.mainBundle(), value: "Take Photo", comment: "home menu option")
+        case 1:
+            cell.label.text = NSLocalizedString("home load_picture", tableName: nil, bundle: NSBundle.mainBundle(), value: "Load Picture", comment: "home menu option")
+        default:
+            // TODO: what i really want here is the display name
+            cell.label.text = NSBundle.mainBundle().infoDictionary!.description
+            //                localizedInfoDictionary.objectForKey("CFBundleDisplayName")
+            
+        }
         //} // section 0
         return cell
     }
 
     // MARK: UICollectionViewDelegate
 
-    
     // Uncomment this method to specify if the specified item should be highlighted during tracking
     override func collectionView(collectionView: UICollectionView, shouldHighlightItemAtIndexPath indexPath: NSIndexPath) -> Bool {
         return true
@@ -84,15 +84,15 @@ class STHomeViewController: UICollectionViewController {
     override func collectionView(collectionView: UICollectionView, shouldSelectItemAtIndexPath indexPath: NSIndexPath) -> Bool {
         switch indexPath.row {
         case 0:
-            if (STCameraUtil.isCameraAvailable())
+            if STCameraUtil.isCameraAvailable()
             {
-                STCameraUtil.loadCamera(self)
+                STCameraUtil.loadCamera(self, delegate: self)
                 return true
             }
         case 1:
-            if (STCameraUtil.isAlbumAvailable())
+            if STCameraUtil.isAlbumAvailable()
             {
-                STCameraUtil.loadAlbum(self)
+                STCameraUtil.loadAlbum(self, delegate: self)
                 return true
             }
         default:
@@ -116,5 +116,38 @@ class STHomeViewController: UICollectionViewController {
     
     }
     */
+    
+    
+    // MARK: UIImagePickerControllerDelegate
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject])
+    {
+        // TODO: make sure we have image only
+        var mediaType = info[UIImagePickerControllerMediaType] as String
+        if (mediaType != kUTTypeImage) { return }
+        
+        var image = info[UIImagePickerControllerEditedImage] as? UIImage
+        if image == nil
+        {
+            image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        }
+        
+        if let notNilImage = image
+        {
+            var mockVC = STWheelMock2dViewController()
+            mockVC.image = notNilImage
+            self.navigationController?.pushViewController(mockVC, animated: true)
+        }
+        else
+        {
+            var alertView = UIAlertView(title: "Invalid Image", message: "", delegate: nil, cancelButtonTitle: "OK")
+            alertView.show()
+        }
+        
+        picker.dismissViewControllerAnimated(true, completion: nil)
+    }
 
+    func imagePickerControllerDidCancel(picker: UIImagePickerController)
+    {
+        picker.dismissViewControllerAnimated(true, completion: nil)
+    }
 }
