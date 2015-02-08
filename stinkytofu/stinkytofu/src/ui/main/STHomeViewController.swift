@@ -9,10 +9,11 @@
 import UIKit
 import MobileCoreServices
 
-let reuseIdentifierMenuItem = "CellMenuItem"
 
 class STHomeViewController: UICollectionViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    let reuseIdentifierMenuItem = "CellMenuItem"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

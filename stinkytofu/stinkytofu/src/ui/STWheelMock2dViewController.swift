@@ -50,5 +50,9 @@ class STWheelMock2dViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    @IBAction func backButtonClicked(sender: AnyObject) {
+        navigationController?.popViewControllerAnimated(true)
+    }
 
 }
