@@ -88,7 +88,7 @@
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                             </scrollView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="afQ-ae-I5J">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="afQ-ae-I5J">
                                 <rect key="frame" x="0.0" y="300" width="600" height="300"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <inset key="separatorInset" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -118,11 +118,11 @@
                                             </attributedString>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gPG-QC-u1R">
-                                            <rect key="frame" x="474" y="6" width="36" height="36"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon40" translatesAutoresizingMaskIntoConstraints="NO" id="gPG-QC-u1R">
+                                            <rect key="frame" x="470" y="4" width="40" height="40"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="gPG-QC-u1R" secondAttribute="height" multiplier="1:1" id="6OV-QE-0Dw"/>
-                                                <constraint firstAttribute="height" constant="36" id="8JT-1F-nAn"/>
+                                                <constraint firstAttribute="height" constant="40" id="8JT-1F-nAn"/>
                                             </constraints>
                                         </imageView>
                                     </subviews>
@@ -205,4 +205,7 @@
             <point key="canvasLocation" x="494" y="473"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icon40" width="40" height="40"/>
+    </resources>
 </document>
