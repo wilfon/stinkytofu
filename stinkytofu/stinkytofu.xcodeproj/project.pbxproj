@@ -16,6 +16,8 @@
 		BE54B7061A417D67005F985D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE54B7041A417D67005F985D /* LaunchScreen.xib */; };
 		BE54B7121A417D67005F985D /* stinkytofuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE54B7111A417D67005F985D /* stinkytofuTests.swift */; };
 		BEAF87BC1A4BB9C50093890C /* STCameraUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAF87BB1A4BB9C50093890C /* STCameraUtil.swift */; };
+		BEBB10341A748FD800FBD565 /* STHomeViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBB10331A748FD800FBD565 /* STHomeViewController2.swift */; };
+		BEBB10361A74A65800FBD565 /* STHomeMenuItem2.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBB10351A74A65800FBD565 /* STHomeMenuItem2.swift */; };
 		BEF8C82B1A4DEDF8001CD97E /* STWheelMock2dViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF8C8291A4DEDF8001CD97E /* STWheelMock2dViewController.swift */; };
 		BEF8C82C1A4DEDF8001CD97E /* STWheelMock2dViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEF8C82A1A4DEDF8001CD97E /* STWheelMock2dViewController.xib */; };
 /* End PBXBuildFile section */
@@ -44,6 +46,8 @@
 		BE54B7101A417D67005F985D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE54B7111A417D67005F985D /* stinkytofuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stinkytofuTests.swift; sourceTree = "<group>"; };
 		BEAF87BB1A4BB9C50093890C /* STCameraUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STCameraUtil.swift; sourceTree = "<group>"; };
+		BEBB10331A748FD800FBD565 /* STHomeViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STHomeViewController2.swift; sourceTree = "<group>"; };
+		BEBB10351A74A65800FBD565 /* STHomeMenuItem2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STHomeMenuItem2.swift; sourceTree = "<group>"; };
 		BEF8C8291A4DEDF8001CD97E /* STWheelMock2dViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STWheelMock2dViewController.swift; sourceTree = "<group>"; };
 		BEF8C82A1A4DEDF8001CD97E /* STWheelMock2dViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STWheelMock2dViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,8 +91,7 @@
 		BE52C1AD1A496184002E18E8 /* ui */ = {
 			isa = PBXGroup;
 			children = (
-				BE52C1AE1A4961EA002E18E8 /* STHomeViewController.swift */,
-				BE2DF6271A4A75F30046B170 /* STHomeMenuItemCell.swift */,
+				BEA0A8771A874F62002B7021 /* main */,
 				BEF8C8291A4DEDF8001CD97E /* STWheelMock2dViewController.swift */,
 				BEF8C82A1A4DEDF8001CD97E /* STWheelMock2dViewController.xib */,
 			);
@@ -150,6 +153,17 @@
 				BE54B7101A417D67005F985D /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BEA0A8771A874F62002B7021 /* main */ = {
+			isa = PBXGroup;
+			children = (
+				BE52C1AE1A4961EA002E18E8 /* STHomeViewController.swift */,
+				BE2DF6271A4A75F30046B170 /* STHomeMenuItemCell.swift */,
+				BEBB10331A748FD800FBD565 /* STHomeViewController2.swift */,
+				BEBB10351A74A65800FBD565 /* STHomeMenuItem2.swift */,
+			);
+			path = main;
 			sourceTree = "<group>";
 		};
 		BEAF87BA1A4BB96C0093890C /* utils */ = {
@@ -262,10 +276,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE52C1AF1A4961EA002E18E8 /* STHomeViewController.swift in Sources */,
+				BEBB10341A748FD800FBD565 /* STHomeViewController2.swift in Sources */,
 				BEF8C82B1A4DEDF8001CD97E /* STWheelMock2dViewController.swift in Sources */,
 				BE54B6FC1A417D67005F985D /* AppDelegate.swift in Sources */,
 				BE2DF6281A4A75F30046B170 /* STHomeMenuItemCell.swift in Sources */,
 				BEAF87BC1A4BB9C50093890C /* STCameraUtil.swift in Sources */,
+				BEBB10361A74A65800FBD565 /* STHomeMenuItem2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
