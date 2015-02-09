@@ -18,6 +18,8 @@
 		BEAF87BC1A4BB9C50093890C /* STCameraUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAF87BB1A4BB9C50093890C /* STCameraUtil.swift */; };
 		BEBB10341A748FD800FBD565 /* STHomeViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBB10331A748FD800FBD565 /* STHomeViewController2.swift */; };
 		BEBB10361A74A65800FBD565 /* STHomeMenuItem2.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBB10351A74A65800FBD565 /* STHomeMenuItem2.swift */; };
+		BECF59BB1A883E0600C9C90F /* STHeadline.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECF59BA1A883E0600C9C90F /* STHeadline.swift */; };
+		BECF59BD1A883E6700C9C90F /* STStory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECF59BC1A883E6700C9C90F /* STStory.swift */; };
 		BEF8C82B1A4DEDF8001CD97E /* STWheelMock2dViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF8C8291A4DEDF8001CD97E /* STWheelMock2dViewController.swift */; };
 		BEF8C82C1A4DEDF8001CD97E /* STWheelMock2dViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEF8C82A1A4DEDF8001CD97E /* STWheelMock2dViewController.xib */; };
 /* End PBXBuildFile section */
@@ -48,6 +50,8 @@
 		BEAF87BB1A4BB9C50093890C /* STCameraUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STCameraUtil.swift; sourceTree = "<group>"; };
 		BEBB10331A748FD800FBD565 /* STHomeViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STHomeViewController2.swift; sourceTree = "<group>"; };
 		BEBB10351A74A65800FBD565 /* STHomeMenuItem2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STHomeMenuItem2.swift; sourceTree = "<group>"; };
+		BECF59BA1A883E0600C9C90F /* STHeadline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STHeadline.swift; sourceTree = "<group>"; };
+		BECF59BC1A883E6700C9C90F /* STStory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STStory.swift; sourceTree = "<group>"; };
 		BEF8C8291A4DEDF8001CD97E /* STWheelMock2dViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STWheelMock2dViewController.swift; sourceTree = "<group>"; };
 		BEF8C82A1A4DEDF8001CD97E /* STWheelMock2dViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STWheelMock2dViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,6 +78,8 @@
 		BE52C1AB1A441D92002E18E8 /* models */ = {
 			isa = PBXGroup;
 			children = (
+				BECF59BA1A883E0600C9C90F /* STHeadline.swift */,
+				BECF59BC1A883E6700C9C90F /* STStory.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -279,9 +285,11 @@
 				BEBB10341A748FD800FBD565 /* STHomeViewController2.swift in Sources */,
 				BEF8C82B1A4DEDF8001CD97E /* STWheelMock2dViewController.swift in Sources */,
 				BE54B6FC1A417D67005F985D /* AppDelegate.swift in Sources */,
+				BECF59BB1A883E0600C9C90F /* STHeadline.swift in Sources */,
 				BE2DF6281A4A75F30046B170 /* STHomeMenuItemCell.swift in Sources */,
 				BEAF87BC1A4BB9C50093890C /* STCameraUtil.swift in Sources */,
 				BEBB10361A74A65800FBD565 /* STHomeMenuItem2.swift in Sources */,
+				BECF59BD1A883E6700C9C90F /* STStory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
