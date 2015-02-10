@@ -10,9 +10,12 @@ import UIKit
 import MobileCoreServices
 
 
-
 class STHomeViewController2: UIViewController, UITableViewDataSource, UITableViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var pageControl: UIPageControl!
+    var headlineManager = STHomeHeadlineManager()
+    
     @IBOutlet weak var tableView: UITableView!
     var tableHeaderView: UIView!
     
@@ -24,6 +27,24 @@ class STHomeViewController2: UIViewController, UITableViewDataSource, UITableVie
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
+        
+        headlineManager.scrollView = scrollView
+        headlineManager.pageControl = pageControl
+        scrollView.delegate = headlineManager
+        
+        let pageCount = headlineManager.colors.count
+        pageControl.currentPage = 0;
+        pageControl.numberOfPages = pageCount;
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let pagesScrollViewSize = self.scrollView.frame.size;
+        self.scrollView.contentSize = CGSizeMake(pagesScrollViewSize.width * CGFloat(headlineManager.colors.count), pagesScrollViewSize.height);
+        
+        // 5
+        headlineManager.loadVisiblePages();
     }
 
     override func didReceiveMemoryWarning() {

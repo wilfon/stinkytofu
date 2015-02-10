@@ -79,15 +79,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WkK-hl-0sP">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WkK-hl-0sP">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
-                                <subviews>
-                                    <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Jh9-fF-Ivj">
-                                        <rect key="frame" x="297" y="252" width="39" height="37"/>
-                                    </pageControl>
-                                </subviews>
-                                <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Jh9-fF-Ivj">
+                                <rect key="frame" x="280" y="259" width="39" height="37"/>
+                            </pageControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="afQ-ae-I5J">
                                 <rect key="frame" x="0.0" y="300" width="600" height="300"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -171,14 +169,18 @@
                             <constraint firstItem="WkK-hl-0sP" firstAttribute="leading" secondItem="IMa-yU-2lL" secondAttribute="leading" id="Ih3-Qe-wXC"/>
                             <constraint firstAttribute="trailing" secondItem="afQ-ae-I5J" secondAttribute="trailing" id="NBF-Ty-cH1"/>
                             <constraint firstItem="yn0-FZ-JQA" firstAttribute="top" secondItem="afQ-ae-I5J" secondAttribute="bottom" id="RhO-cI-t5r"/>
+                            <constraint firstItem="Jh9-fF-Ivj" firstAttribute="bottom" secondItem="WkK-hl-0sP" secondAttribute="bottom" constant="-4" id="XV2-AG-Qvd"/>
                             <constraint firstItem="WkK-hl-0sP" firstAttribute="top" secondItem="9fl-S4-VDi" secondAttribute="bottom" constant="-20" id="cdA-l3-sxi"/>
                             <constraint firstItem="afQ-ae-I5J" firstAttribute="top" secondItem="WkK-hl-0sP" secondAttribute="bottom" id="dfL-rc-cPw"/>
+                            <constraint firstAttribute="centerX" secondItem="Jh9-fF-Ivj" secondAttribute="centerX" constant="0.5" id="jqU-Xf-Mt9"/>
                             <constraint firstItem="afQ-ae-I5J" firstAttribute="height" secondItem="IMa-yU-2lL" secondAttribute="height" multiplier="0.5" id="mnE-jL-ywZ"/>
                             <constraint firstItem="afQ-ae-I5J" firstAttribute="leading" secondItem="IMa-yU-2lL" secondAttribute="leading" id="ooP-y9-7ou"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ePA-yn-Vca"/>
                     <connections>
+                        <outlet property="pageControl" destination="Jh9-fF-Ivj" id="ehm-qV-jGL"/>
+                        <outlet property="scrollView" destination="WkK-hl-0sP" id="xV8-AA-Kre"/>
                         <outlet property="tableView" destination="afQ-ae-I5J" id="9OY-eD-VQi"/>
                     </connections>
                 </viewController>
